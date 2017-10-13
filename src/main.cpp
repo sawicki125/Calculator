@@ -5,6 +5,11 @@
 int main()
 {
     Calculator cal;
-    std::cout<< cal.count("1+1");
+    std::string input;
+    std::cin >> input;
+    while(input!="stop") {
+        std::cout<< cal.count(input) << std::endl;
+        std::cin >> input;
+    }
     return 0;
 }
