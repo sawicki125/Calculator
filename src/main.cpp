@@ -1,8 +1,10 @@
-#include "gtest/gtest.h"
+#include "iostream"
+#include "Calculator.hpp"
 
 
-int main(int argc, char* argv[])
+int main()
 {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    Calculator cal;
+    std::cout<< cal.count("1+1");
+    return 0;
 }
