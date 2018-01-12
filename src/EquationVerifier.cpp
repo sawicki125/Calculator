@@ -16,16 +16,16 @@ void EquationVerifier::validate(const std::vector<std::string>& cutInPiecesEq)
         }
         catch(std::invalid_argument ex)
         {
-            char catchedNotNumber = current.front();
-            if(!isFuncChar(catchedNotNumber))
+            char caughtNotNumber = current.front();
+            if(!isFuncChar(caughtNotNumber))
             {
                 throw std::invalid_argument("Bad input: Not math equation symbol occurred");
             }
-            else if(catchedNotNumber == '(')
+            else if(caughtNotNumber == '(')
             {
                 openBrackets++;
             }
-            else if(catchedNotNumber == ')')
+            else if(caughtNotNumber == ')')
             {
                 closeBrackets++;
                 if(closeBrackets > openBrackets)
@@ -60,7 +60,6 @@ void EquationVerifier::checkSyntax(const std::vector<std::string>& cutInPiecesEq
         }
         else
         {
-
             next = "";
         }
         if(isMathSymbol(current->front()))
